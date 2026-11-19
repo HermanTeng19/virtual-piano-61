@@ -1,5 +1,7 @@
 # 🎹 Virtual Piano 61 (C2 – C7) | 61 键网页三角钢琴
 
+**🌐 在线试玩 / Live Demo:** [https://hermanteng19.github.io/virtual-piano-61/](https://hermanteng19.github.io/virtual-piano-61/) · **🎼 直接演奏《纸飞机越过山丘》:** [https://hermanteng19.github.io/virtual-piano-61/?perform=1](https://hermanteng19.github.io/virtual-piano-61/?perform=1)
+
 [English](#english) · [中文](#中文)
 
 ---
