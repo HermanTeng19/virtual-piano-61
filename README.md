@@ -24,7 +24,7 @@
   - **过渡 (`0:24 – 0:41`)**：`Dmaj9 → Dm9` 同主音转调至 C 大调，左手提前切入十六分音符宽广琶音，低音 `A→B→C→E` 配右手八度渐强推升
   - **高潮 (`0:41 – 0:56`)**：C 大调华丽高潮（`Fmaj9 → G9sus4 → E7 → Am7 → Dm9 [最高音 A6] → G7 → Cadd9 → Fmaj9`）
   - **尾声 (`0:56 – 1:05`)**：`G9sus4 → G6 → Fm` 怀旧解决，最终以纯净 `Cadd9` 向上滚奏收束
-  - 演奏器全程向 `window` 派发真实 `KeyboardEvent`（含 `Shift` 黑键与 `Space` 踏板），与手动弹奏走完全一致的逻辑；点击顶部 **⏭ 高潮 (0:41)** 可直达高潮段落。完整按键谱见 [SCORE.md](./SCORE.md)。
+  - 演奏器全程向 `window` 派发真实 `KeyboardEvent`（含 `Shift` 黑键与 `Space` 踏板），与手动弹奏走完全一致的逻辑；点击顶部 **⏭ 高潮 (0:41)** 可直达高潮段落。完整按键谱见 [SCORE.md](./SCORE.md)，成品音频见 [audio/paper-plane-over-the-hill.mp3](./audio/paper-plane-over-the-hill.mp3)（320kbps 立体声 MP3）。
 
 ### 🚀 本地运行
 
@@ -62,7 +62,7 @@ A minimalist, studio-voiced **61-key Virtual Web Piano (C2 – C7)** powered by 
   - **Transition (`0:24 – 0:41`)**: Seamless parallel-minor pivot (`Dmaj9 → Dm9`) into C major, layered 16th-note left-hand arpeggios, ascending bass (`A→B→C→E`), and octave crescendo
   - **Climax (`0:41 – 0:56`)**: Soaring C-major climax (`Fmaj9 → G9sus4 → E7 → Am7 → Dm9 [apex A6] → G7 → Cadd9 → Fmaj9`)
   - **Ending (`0:56 – 1:05`)**: Ritardando through `G9sus4 → G6 → Fm`, resolving into a crystal-clear rolled `Cadd9` chord
-  - Driven by real `KeyboardEvent` dispatches (`keydown`/`keyup`, `Shift` for black keys, `Space` for sustain pedal). Jump straight to the climax via the **⏭ 高潮 (0:41)** button, or read the full key-by-key score in [SCORE.md](./SCORE.md).
+  - Driven by real `KeyboardEvent` dispatches (`keydown`/`keyup`, `Shift` for black keys, `Space` for sustain pedal). Jump straight to the climax via the **⏭ 高潮 (0:41)** button, read the key-by-key score in [SCORE.md](./SCORE.md), or listen directly to the rendered 320kbps stereo recording in [audio/paper-plane-over-the-hill.mp3](./audio/paper-plane-over-the-hill.mp3).
 
 ### 🚀 Quick Start
 
@@ -90,6 +90,7 @@ virtual-piano-61/
 ├── piano.js         # Yamaha C5 sample engine, waterfall canvas & keyboard auto-performer
 ├── composition.js   # Full 1:05 score & keypress compiler for《纸飞机越过山丘》
 ├── SCORE.md         # Complete computer-keyboard score reference
+├── audio/           # Rendered 320kbps stereo MP3 of《纸飞机越过山丘》
 └── samples/         # 22 local Yamaha C5 Salamander Grand Piano MP3 samples (A1–C7)
 ```
 
