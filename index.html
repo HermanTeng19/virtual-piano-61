@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VIRTUAL PIANO | 《纸飞机越过山丘》 (61 键 C2 – C7)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="stage">
+    <header class="hero-header">
+      <h1 lang="en">VIRTUAL PIANO</h1>
+      <p class="desc-line">
+        <strong>61 键 (C2 – C7)</strong>。用电脑键盘弹：每个琴键上标着对应的按键，<strong>白键</strong>是小写字母和数字，<strong>黑键</strong>是按住 <strong>Shift</strong> 的那个字符（大写字母或符号）。
+      </p>
+      <p class="desc-line">
+        按住 <strong>空格</strong> = 踩延音踏板，松开空格 = 放开踏板。也可以用鼠标点琴键。
+      </p>
+
+      <div class="status-row">
+        <div class="record-status" id="record-status" role="status" aria-live="polite" title="自动记录本页弹奏的每一个音符">
+          <span class="record-dot" aria-hidden="true"></span>
+          <span id="record-text">录音中：这个页面上弹的每一个音都会被记录下来（刷新页面 = 新的一遍）</span>
+        </div>
+        <button type="button" id="btn-play-piece" class="play-piece-btn" aria-pressed="false">
+          ▶ 演奏《纸飞机越过山丘》
+        </button>
+        <button type="button" id="btn-jump-climax" class="pedal-badge" title="直接跳到 0:41 高潮段落">
+          ⏭ 高潮 (0:41)
+        </button>
+      </div>
+
+      <p id="now-playing" class="now-playing" hidden aria-live="polite"></p>
+    </header>
+
+    <section class="piano-frame" aria-label="61键钢琴键盘与瀑布流落键舞台">
+      <div class="piano-top-rail" aria-hidden="true"></div>
+      <div class="waterfall-stage">
+        <canvas id="waterfall-canvas" width="1440" height="240" aria-hidden="true"></canvas>
+        <div class="waterfall-hud">
+          <div class="waterfall-hud-left">
+            <div id="stage-time-section" class="stage-time-section">0:00 / 1:05 · 开头</div>
+            <div id="stage-sub-label" class="stage-sub-label">完整版：开头 → 发展 → 高潮 → 尾声</div>
+          </div>
+          <div class="waterfall-hud-right">
+            <span class="stage-piece-title">《纸飞机越过山丘》</span>
+            <button type="button" id="pedal-indicator" class="pedal-badge stage-pedal-btn" aria-pressed="false" title="按住空格键踩下延音踏板（也可点击切换）">
+              踏板
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="piano-keys" class="piano-keys" role="group" aria-label="61个琴键">
+        <!-- 36 White Keys & 25 Black Keys rendered by piano.js -->
+      </div>
+    </section>
+  </main>
+
+  <dialog id="dialog-perform" aria-labelledby="perform-title">
+    <h2 id="perform-title">🎼 《纸飞机越过山丘》完整版 (1:05)</h2>
+    <p class="perform-meta">Yamaha C5 Acoustic 三角钢琴音色 · 开头(0:00) → 主部(0:12) → 过渡(0:24) → 高潮(0:41) → 尾声(0:56)</p>
+    <p class="perform-desc">
+      点击开始后，网页钢琴将使用真实键盘按键（白键按字母/数字、黑键按住 Shift、换和弦时空格踩踏板）把整首 1:05 独奏完整弹奏下来。
+    </p>
+    <form method="dialog" class="perform-actions">
+      <button type="submit" value="play" id="btn-perform-start" class="play-piece-btn" autofocus>▶ 开始演奏</button>
+      <button type="submit" value="cancel" class="pedal-badge">稍后再听</button>
+    </form>
+  </dialog>
+
+  <script type="module" src="piano.js"></script>
+</body>
+</html>
